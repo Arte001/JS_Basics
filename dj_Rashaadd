@@ -1,0 +1,10 @@
+const Body = document.querySelector('body');
+Body.style.backgroundColor = "#696969";
+const Page = document.querySelector('.page');
+Page.style.color = "ghostwhite";
+const Title = document.querySelector('.name');
+Title.innerHTML = "DJ Rashad";
+const Image = document.querySelector('img');
+Image.setAttribute('src', 'http://truantsblog.com/wp-content/uploads/2014/04/flg-rashad-1.jpg');
+const Move = document.querySelector('.short-bio');
+Move.className += ' animated';
