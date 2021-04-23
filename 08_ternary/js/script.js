@@ -1,5 +1,4 @@
-let number = prompt ("enter the number");
-number = parseInt(number);
+let number = parseInt(prompt ("enter the number"));
 
 /*if(number<0) {
 	console.log(-number);
@@ -11,4 +10,5 @@ else {
 	console.log(number);
 }
 */
-(number >= 0) ? console.log(number) : console.log(-number);
+//(number >= 0) ? console.log(number) : console.log(-number);//
+console.log((number >= 0) ? (number) : (-number));
