@@ -19,5 +19,5 @@ const haveEnough = function (totalCash, watchesSum, earringsSum, watchesCount, e
 		return 'Not enough $$$';
 	}
 }
-document.body.innerHTML = haveEnough('return');
+document.body.innerHTML = haveEnough(totalCash, watchesSum, earringsSum, watchesCount, earringsCount);
 
