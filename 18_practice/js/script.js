@@ -1,14 +1,21 @@
-const button = document.querySelector('.button');
-const par = document.querySelector('.popup');
-
-let status = 'none';
+const button = document.querySelector('.request');
+const popup = document.querySelector('.popup');
+const icon = document.querySelector('.closePopup');
 
 button.addEventListener('click', function(){
-  if (state == 'none'){
-    par.style.display = 'flex';
-    state = 'flex';
-  	} else {
-    par.style.display = 'none';
-    state = 'none';
-  }
+	popup.style.display = 'flex';
+})
+
+icon.addEventListener('click', function(){
+	popup.style.display = 'none';
+})
+const burger = document.querySelector('.openMenu');
+const close = document.querySelector('.closeMenu');
+const menu = document.querySelector('.menu');
+
+close.addEventListener('click', function(){
+	menu.style.left = '-50vw';
+})
+burger.addEventListener('click', function(){
+	menu.style.left = 0;
 })
