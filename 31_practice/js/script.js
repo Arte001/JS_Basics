@@ -34,8 +34,9 @@ crypto.forEach(currency => {
   container.append(myElement) // добавили этот созданный элемент внутрь ранее найденного контейнера
   container.append(myText) // добавили этот созданный элемент внутрь ранее найденного контейнера
   container.append(myBlock) // добавили этот созданный элемент внутрь ранее найденного контейнера
-  Document.getElementsByClassName('myBlock')style.width="1000px" //назначили ширину
-  Document.getElementsByClassName('myBlock')style.color="red" // назначили цвет
+  myBlock.style.width = currency.price / 10 + 'px' //назначили ширину
+  myBlock.style.height="15px" // назначили высоту
+  myBlock.classList.add(currency.name.toLowerCase())
 });
 
 

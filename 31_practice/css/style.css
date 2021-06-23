@@ -1,1 +1,29 @@
 @import url(reset.css);
+
+.bitcoin {
+	background-color: red;
+	border: 0.1px solid black;
+}
+
+.ethereum {
+	background-color: #5990DC;
+	border: 0.1px solid black;
+}
+
+.litecoin {
+	background-color: #7BE0C3;
+	border: 0.1px solid black;
+}
+
+
+.element {
+	line-height: 25px;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+.text {
+	line-height: 25px;
+	font-family: Helvetica;
+	font-weight: lighter;
+}
