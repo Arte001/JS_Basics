@@ -36,7 +36,7 @@ crypto.forEach(currency => {
   container.append(myBlock) // добавили этот созданный элемент внутрь ранее найденного контейнера
   myBlock.style.width = currency.price / 10 + 'px' //назначили ширину
   myBlock.style.height="15px" // назначили высоту
-  myBlock.classList.add(currency.name.toLowerCase())
+  myBlock.classList.add(currency.name.toLowerCase()) //устанавливаем css класс для каждой шкалы
 });
 
 
