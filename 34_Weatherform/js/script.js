@@ -17,7 +17,8 @@ if(xhr.status !=200) {
 	console.log(xhr.status + ' ' + xhr.statusText);
 } else {
 	let DATA = JSON.parse(xhr.responseText);
-	console.log(DATA);
+	let celsium = DATA - 273;
+	insert.innerHTML = celsium.main.temp;
 }
 
 
