@@ -4,18 +4,17 @@ class Person {
 		this.happiness = 0;
 	}
 	hasCat() {
-		return this.happiness + 1;
+		return this.happiness = (this.happiness + 1);
 	}
 	hasRest() {
-		return this.happiness + 1;
+		return this.happiness = (this.happiness + 1);
 	}
 	hasMoney() {
-		return this.happiness + 1;
+		return this.happiness = (this.happiness + 1);
 	}
 	isSunny() {
 		if(celsium > 15){
-			this.happiness + 1;
-			return this.happiness;
+			return this.happiness = (this.happiness + 1);
 		}else{
 			return this.happiness;
 		}
@@ -32,7 +31,7 @@ let DATA = JSON.parse(xhr.responseText);
 console.log(DATA);
 let celsium = (DATA.main.temp - 273.15);
 
-const form = document.forms;
+const form = document.forms[0];
 console.log(form);
 form.addEventListener('submit', function (e){
 	e.preventDefault();
@@ -40,27 +39,44 @@ form.addEventListener('submit', function (e){
 	let name2 = document.forms[0].name.value;
 
 	let person = new Person(name2);
+	console.log(person);
 	let cat = document.forms[0].cat.value;
+	console.log(cat);
 	let rest = document.forms[0].rest.value;
+	console.log(rest);
 	let money = document.forms[0].money.value;
+	console.log(money);
 
 	const insertName = document.querySelector('.personName');
+	const insertIcon = document.querySelector('.icon');
 
-	if(cat = yes){
-		hasCat();
+	if(cat =='yes'){
+		person.hasCat();
 	}else{
 		console.log();
 	}
-	if(rest = yes){
-		hasRest();
+
+	if(rest == 'yes'){
+		person.hasRest();
 	}else{
 		console.log();
 	}
-	if(money = yes){
-		hasMoney();
+
+	if(money == 'yes'){
+		person.hasMoney();
 	}else{
 		console.log();
+	}
 
+	person.isSunny();
 
+	insertName.innerHTML = name2 + ':';
+	
+	if (this.happiness == 4){
+		insertIcon.innerHTML = '😁';
+	}else if(this.happiness >=2){
+		insertIcon.innerHTML = '😐';
+	}else{
+		insertIcon.innerHTML = '☹️';
 	}
 })
