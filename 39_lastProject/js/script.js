@@ -4,17 +4,28 @@ class Person {
 		this.happiness = 0;
 	}
 	hasCat() {
-		return this.happiness + 1;
+		return this.happiness = this.happiness + 1;
 	}
 	hasRest() {
-		return this.happiness + 1;
+		return this.happiness = this.happiness + 1;
 	}
 	hasMoney() {
-		return this.happiness + 1;
+		return this.happiness = this.happiness + 1;
 	}
 	isSunny() {
-		if(celsium > 15){
-			return this.happiness + 1;
+		const APIKey = 'ed41bdd2f66cf5d745c3e52938a48f99';
+		const url = 'http://api.openweathermap.org/data/2.5/weather?q=Moscow&appid='+APIKey;
+		let xhr = new XMLHttpRequest();
+		xhr.open('GET', url, false);
+		xhr.send();
+		let DATA = JSON.parse(xhr.responseText);
+		console.log(DATA);
+		let celsium = (DATA.main.temp - 273.15);
+			
+		if(xhr.status != 200){
+   			 console.log(xhr.status + ' ' + xhr.statusText);
+		}else if(celsium > 15){
+			return this.happiness = this.happiness + 1;
 		}else{
 			return this.happiness;
 		}
@@ -22,14 +33,7 @@ class Person {
 	}
 }
 
-const APIKey = 'ed41bdd2f66cf5d745c3e52938a48f99';
-const url = 'http://api.openweathermap.org/data/2.5/weather?q=Moscow&appid='+APIKey;
-let xhr = new XMLHttpRequest();
-xhr.open('GET', url, false);
-xhr.send();
-let DATA = JSON.parse(xhr.responseText);
-console.log(DATA);
-let celsium = (DATA.main.temp - 273.15);
+
 
 const form = document.forms[0];
 console.log(form);
