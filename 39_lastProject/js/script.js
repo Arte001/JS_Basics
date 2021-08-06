@@ -76,9 +76,9 @@ form.addEventListener('submit', function (e){
 
 	insertName.innerHTML = name2 + ':';
 
-	if (this.happiness == 4){
+	if (person.happiness == 4){
 		insertIcon.innerHTML = '😁';
-	}else if(this.happiness >=2){
+	}else if(person.happiness >=2){
 		insertIcon.innerHTML = '😐';
 	}else{
 		insertIcon.innerHTML = '☹️';
