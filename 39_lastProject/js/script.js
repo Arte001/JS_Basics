@@ -4,17 +4,17 @@ class Person {
 		this.happiness = 0;
 	}
 	hasCat() {
-		return this.happiness = (this.happiness + 1);
+		return this.happiness + 1;
 	}
 	hasRest() {
-		return this.happiness = (this.happiness + 1);
+		return this.happiness + 1;
 	}
 	hasMoney() {
-		return this.happiness = (this.happiness + 1);
+		return this.happiness + 1;
 	}
 	isSunny() {
 		if(celsium > 15){
-			return this.happiness = (this.happiness + 1);
+			return this.happiness + 1;
 		}else{
 			return this.happiness;
 		}
@@ -71,7 +71,7 @@ form.addEventListener('submit', function (e){
 	person.isSunny();
 
 	insertName.innerHTML = name2 + ':';
-	
+
 	if (this.happiness == 4){
 		insertIcon.innerHTML = '😁';
 	}else if(this.happiness >=2){
